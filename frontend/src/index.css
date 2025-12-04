@@ -1,0 +1,121 @@
+:root {
+  --beige-bg: #f8f4ec;
+  --beige-light: #fdf6e3;
+  --beige-dark: #e8d9c5;
+  --accent-blue: #3a7bd5;
+  --accent-green: #2ecc71;
+  --text-dark: #333;
+  --text-light: #666;
+  --card-bg: #fff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --border: 1px solid #e0d0c0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--beige-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: var(--text-dark);
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px rgba(58, 123, 213, 0.2);
+}
+
+button {
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2c5fa1;
+}
+
+button.secondary {
+  background: var(--accent-green);
+}
+
+button.secondary:hover {
+  background: #27ae60;
+}
+
+button.cancel {
+  background: #e0e0e0;
+  color: #333;
+}
+
+button.cancel:hover {
+  background: #d0d0d0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+p {
+  margin: 8px 0;
+  color: var(--text-light);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
