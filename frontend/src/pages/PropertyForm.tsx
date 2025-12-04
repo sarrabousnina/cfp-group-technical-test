@@ -17,7 +17,6 @@ export default function PropertyForm() {
 
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  // Load existing data if editing
   useEffect(() => {
     if (isEditing && id) {
       api.get<Property>(`/properties/${id}`).then((res) => {
@@ -58,7 +57,6 @@ export default function PropertyForm() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    // Clear error when user types (optional UX polish)
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
     }
@@ -67,7 +65,6 @@ export default function PropertyForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validate all fields
     const newErrors: Record<string, string> = {};
     for (const key in formData) {
       const error = validateField(key, formData[key as keyof typeof formData]);

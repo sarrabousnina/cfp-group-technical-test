@@ -9,7 +9,6 @@ export default function PropertyCard({ property }: { property: Property }) {
     e.stopPropagation();
     if (confirm('Êtes-vous sûr de vouloir supprimer ce bien ?')) {
       api.delete(`/properties/${property.id}`).then(() => {
-        // Simple reload to reflect deletion
         window.location.reload();
       }).catch(() => {
         alert('Erreur lors de la suppression.');
